@@ -1,12 +1,10 @@
 const mongoose=require("mongoose")
-
-const mongodburl="mongodb://localhost:27017/hospital"
-
+require('dotenv').config()
+// const mongodburl=process.env.MONGOURL_LOCAL
+const mongodburl=process.env.MOGOURL
 mongoose.connect(mongodburl)
 
-
-
-
+        
 const db=mongoose.connection
 db.on('connected',()=>{
     console.log("connected to mongodb server")

@@ -4,6 +4,9 @@ const db=require('./db')
 
 const bodyparser=require('body-parser')
 app.use(bodyparser.json())
+const PORT=process.env.PORT||300
+require('dotenv').config()
+
 
 const docroute=require('./routes/docroute')
  const patroute=require("./routes/patroute")
@@ -16,4 +19,4 @@ app.use("/pat",patroute)
 
 
 
-app.listen(300,()=>{console.log("server listening")})
+app.listen(PORT,()=>{console.log("server listening")})
