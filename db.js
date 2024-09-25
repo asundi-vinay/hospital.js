@@ -2,7 +2,8 @@ const mongoose=require("mongoose")
 require('dotenv').config()
 const mongodburl=process.env.MONGOURL_LOCAL
 
-// const mongodburl=process.env.MOGOURL_ONLINE
+
+// const mongodburl=process.env.MOGOURL_LOC
 mongoose.connect(mongodburl)
 
         
